@@ -42,6 +42,41 @@ markerTest3.bindPopup("<b>Playdate happening with my Golden!</b>").openPopup();
 markerTest4.bindPopup("<b>I'm number 4</b>").openPopup();
 circle.bindPopup("Seattle Park");
 
+//popup testing
+const popup = L.popup();
+
+//map click that tells you the coordinates you clicked on, provides a popup with the info
+// function onMapClick(e) {
+//   popup
+//     .setLatLng(e.latlng)
+//     .setContent("You clicked the map at " + e.latlng.toString())
+//     .openOn(map);
+// }
+// map.on("click", onMapClick);
+
+//Icon added to map of user's profile picture (Dog)
+var myIcon = L.icon({
+  iconUrl: "./assets/dogemoji.png",
+  iconSize: [50, 50],
+  iconAnchor: [22, 10],
+  popupAnchor: [-3, -76],
+  shadowUrl: "my-icon-shadow.png",
+  shadowSize: [],
+  shadowAnchor: [],
+});
+
+var myIcon2 = L.icon({
+  iconUrl: "./assets/catemoji.png",
+  iconSize: [50, 50],
+  iconAnchor: [22, 10],
+  popupAnchor: [-3, -76],
+  shadowUrl: "my-icon-shadow.png",
+  shadowSize: [],
+  shadowAnchor: [],
+});
+L.marker([47.609, -122.332], { icon: myIcon }).addTo(map);
+L.marker([47.609, -122.336], { icon: myIcon2 }).addTo(map);
+
 //popup layer when you need something more than attaching a popup to an object
 // const popup = L.popup()
 //   .setLatLng([47.606, -122.332])
